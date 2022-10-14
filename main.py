@@ -5,7 +5,8 @@ import config
 apiKey = 'x-api-key'
 REQ_URL = 'https://api.setlist.fm/rest/1.0/artist'
 SETLIST_REQ = 'setlists?p=1'
-artist_id = 'a1812f41-871c-4a8a-b669-bafa5e9f2c8f'
+artist_id_wy = 'a1812f41-871c-4a8a-b669-bafa5e9f2c8f'
+artist_id_opint = '3063d50e-22ac-496f-aaa5-8e7f8e20710c'
 
 import json
 import requests
@@ -22,7 +23,7 @@ def load_setlist_data_from_setlist_fm(artist_id):
     return json.loads(rsp.content)
 
 if __name__ == '__main__':
-    setlist_json = load_setlist_data_from_setlist_fm(artist_id)
+    setlist_json = load_setlist_data_from_setlist_fm(artist_id_wy)
 #    print(json.dumps(setlist_json, indent=2))
 
     songs = {}
